@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmaS - A Lucho's App</title>
+    <script>
+      //   function encodeTextArea() {
+      //     var textarea = document.getElementById("textInput");
+      //     textarea.value = encodeURIComponent(textarea.value);
+      //   }
+      //   const loadAllTheShit = () => {
+      //     let answerForm = document.getElementById("AnswerForm");
+      //     answerForm.addEventListener("submit", sendRequest);
+      //   };
+
+      //   window.addEventListener("load", loadAllTheShit);
+      //   const sendRequest = (e) => {
+      //     // e.preventDefault();
+      //     console.log(e);
+      //   };
+    </script>
+  </head>
+  <body>
+    <form
+      id="AnswerForm"
+      accept-charset="utf-8"
+      action="http://localhost:8000"
+      method="POST"
+    >
+      <h3>Question to Answer:</h3>
+      <textarea name="userEntry" id="textInput" cols="80" rows="10"></textarea>
+      <button>Check In</button>
+    </form>
+  </body>
+</html>
