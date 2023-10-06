@@ -1,47 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SmaS - A Lucho's App</title>
-    <script>
-      const getDate = () => {
-        let today = new Date();
 
-        let day = String(today.getDate());
-        let month = String(today.getMonth() + 1);
-        let year = String(today.getFullYear());
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmaS - A Lucho's App</title>
+  <script src="scripts/main.js"></script>
 
-        concatenated_date = month + "/" + day + "/" + year;
-        console.log(concatenated_date, 1);
-        return concatenated_date;
-      };
+</head>
 
-      const appendDate = () => {
-        targetForm = document.getElementById("AnswerForm");
-        artificialInput = document.createElement("input");
+<body>
+  <form id="AnswerForm" accept-charset="utf-8" action="http://localhost:8000" method="POST" onsubmit="appendDate()">
+    <h3>Question to Answer:</h3>
+    <textarea name="userEntry" id="textInput" cols="80" rows="10"></textarea>
+    <button>Check In</button>
+  </form>
+</body>
 
-        artificialInput.hidden = "true";
-        artificialInput.type = "date";
-        artificialInput.name = "date";
-        artificialInput.valueAsDate = new Date();
-
-        targetForm.appendChild(artificialInput);
-      };
-    </script>
-  </head>
-  <body>
-    <form
-      id="AnswerForm"
-      accept-charset="utf-8"
-      action="http://localhost:8000"
-      method="POST"
-      onsubmit="appendDate()"
-    >
-      <h3>Question to Answer:</h3>
-      <textarea name="userEntry" id="textInput" cols="80" rows="10"></textarea>
-      <input name="debug" type="text" />
-      <button>Check In</button>
-    </form>
-  </body>
 </html>
